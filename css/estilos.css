@@ -1,0 +1,879 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader-content {
+    font-size: 230px;
+    position: absolute;
+    z-index: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 1000;
+    font-style:normal;
+    color: white;
+    bottom: 0;
+    right: 2%;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  .backgrounds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    display: flex;
+  }
+  
+  .background {
+    width: 25%;
+    height: 100%;
+    
+  }
+
+  .backgrounds_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .backgrounds_menu2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    z-index: 2;
+  }
+  .backgrounds_menu2 .background_menu{
+    padding-bottom: 0%;
+  }
+  .backgrounds_menu2 .background_menu:hover{
+    padding-bottom: 2%;
+    transition: all .5s;
+  }
+
+  .background_menu {
+    width: 100%;
+    height: 90%;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 8px;
+    font-size: 30px;
+    padding-bottom: 20%;
+    transition: all .8s;
+  }
+  .background_menu:hover{
+    font-size: 33px;
+    transition: all .8s;
+    box-shadow: 2px 2px 15px 1px grey;
+  }
+  .botones_menu{
+    width: 25%;
+    height: 100%;
+    text-decoration: none;
+  }
+  .opcion_menu{
+    border-bottom: 1px solid white;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  
+  .black {
+    background-color: black;
+    color: white;
+  }
+  
+  .red {
+    background-color: #DE2E03;
+  }
+  
+  .white {
+    background-color: white;
+  }
+  
+  .move-up {
+    animation: moveUp 4s ease forwards;
+  }
+  .move-down {
+    animation: moveDown 4s ease forwards;
+  }
+  .caja_contenido_shalk{
+    display: flex;
+    height: 100vh;
+    position: relative;
+  }
+  .titulo_seccion{
+    width: 25%;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    letter-spacing: 8px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+  }
+  .nombre_shalk{
+    margin-bottom: 10%;
+  }
+  .subtitulo_seccion{
+    width: 2%;
+    color: white;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    writing-mode:vertical-lr;
+    transform: rotate(180deg);
+    text-align: right;
+    cursor: pointer;
+  }
+  .subtitulo_seccion_palabra{
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    height: 100%;
+  }
+  .subtitulo_seccion_palabra_proyectos{
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    height: 100%;
+    color: black;
+    border: black 1px solid;
+    cursor:auto;
+  }
+  .palabra_perfil{
+    padding-bottom: 5%;
+  }
+  .palabra_perfil2{
+    padding-bottom: 1%;
+  }
+  
+  .checker_perfil{
+    display: none;
+    transition: all .3s;
+  }
+  .checker_perfil:checked + .experiencia{
+    width: 100%;
+  
+    visibility:visible;
+    opacity:1;
+    height: 100%;
+    
+  }
+  .experiencia{
+    position: absolute;
+    background-color: white;
+    height: auto;
+    left: 0%;
+    width: 100%;
+    visibility:hidden;
+    opacity:0;
+    transition: all .3s;
+    overflow: auto;
+  }
+  .caja_general_experincia{
+    display: flex;
+    
+  }
+  .caja_negra_experiencia{
+    width: 15%;
+  }
+  .caja_experiencia{
+    padding-top: 5%;
+  }
+  .titulo_caja_experiencia{
+    text-transform: uppercase;
+    border-bottom: black 1px solid;
+    padding: 2%;
+    font-weight: bolder;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  .borde_blanco{
+    border: 1px white solid;
+  }
+  .caja_experiencia_1{
+    display: flex;
+    border-bottom: black 1px solid;
+  }
+  .caja_academica_1{
+    display: flex;
+    border-bottom: rgb(255, 255, 255) 1px solid;
+  }
+  .caja_academica{
+    width: 25%;
+   border-right: white solid 1px;
+   border-top: white solid 1px;
+  }
+  .caja_laboral{
+    border-right: 1px solid black;
+    width: 30%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+  }
+  .caja_laboral2{
+    border-right: 1px solid black;
+    width: 30%;
+    padding: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: flex-end;
+  }
+  .caja_laboral h4{
+    margin: 0%;
+  }
+  .titulo_experiencia{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    border-right: 1px solid rgb(255, 255, 255);
+    padding: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: flex-end;
+  }
+  .titulo_experiencia_academica{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: flex-end;
+    border-bottom: white solid 1px;
+  }
+  .caja_experiencia_2{
+    display: flex;
+    border-bottom: black 1px solid;
+  }
+  .caja_experiencia_info{
+    width: 30%;
+    border-right: black 1px solid;
+    padding: 2%;
+    padding-bottom: 0%;
+  }
+  .caja_experiencia_info_academica{
+    border-right: black 1px solid;
+    padding: 2%;
+    padding-bottom: 0%;
+    
+  }
+  .flex_experiencia{
+    display: flex;
+  }
+  .periodo{
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    rotate: 180deg;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-right: 5%;
+    text-align: right;
+    word-spacing: 10px;
+  }
+  .ubicacion{
+    text-transform: uppercase;
+    padding-top: 10%;
+    letter-spacing: 2px;
+  }
+  .objetivos_insights{
+    text-transform: uppercase;
+    padding-top: 10%;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  .objetivos_insights h4{
+    margin: 0 0 4% 0;
+  }
+  .caja_2_derecha{
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    flex-direction: column;
+    width: 800px;
+    margin: auto;
+    margin-bottom: 0%;
+  }
+  .subtitulos_experiencia{
+    display: flex;
+  }
+  .caja_experiencia_3{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: black 1px solid;
+  }
+  .descripcion_experiencia{
+    width: 30%;
+    padding: 2%;
+    border-right: black solid 1px;
+  }
+  .caja_3_derecha{
+    width: 60%;
+    display: flex;
+    padding-top: 2%;
+  }
+  .parrafo_experiencia{
+    width: 60%;
+  }
+  .parrafo_experiencia p{
+    margin-top: 0%;
+  }
+  .rol_experiencia{
+    padding-left: 5%;
+  }
+
+  .contenedor_info{
+    width: 69%;
+  }
+  .contenedor_info_portafolio{
+    width: 100%;
+    padding-top: 5%;
+  }
+  .contenedor_habilidades{
+    width: 36%;
+  }
+  /*slider*/ 
+  .slider-nav{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sliderBottom{
+    margin: 0px;
+    padding: 1%;
+    position: relative;
+    text-align: center;
+    height: auto;
+  }
+  .sliderBottom img{
+    width: 220px;
+    height: auto;
+    margin: auto;
+    border-radius: 20px;
+  }
+  /**/
+  .titulo_desarrollo{
+    width: 72%;
+  }
+  .titulo_perfil{
+    padding: 5%;
+    padding-top: 8.5%;
+    letter-spacing: 2px;
+  }
+  
+  .roles{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    padding-top: 100px;
+    font-family: "Inter", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    letter-spacing: 2px;
+    border-bottom: 2px rgb(123, 123, 123) solid;
+  }
+  .roles_habilidades{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    padding-top: 300px;
+    font-family: "Inter", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    letter-spacing: 2px;
+    border-bottom: 2px rgb(123, 123, 123) solid;
+  }
+  .descripcion{
+    padding: 5%;
+    padding-top: 2%;
+  }
+  .letra_White{
+    color: #ffffff;
+  }
+  .caja_habilidad_descripcion{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 5%;
+    margin: 2% 0%;
+  }
+  .barra_general{
+    width: 99%;
+    height: 10px;
+    border: 1px solid white;
+  }
+  .barra_comunicativa{
+    height: 10px;
+    width: 90%;
+  }
+  .barra_creativa{
+    height: 10px;
+    width: 80%;
+  }
+  .barra_equipo{
+    height: 10px;
+    width: 90%;
+  }
+  .barra_comprometida{
+    height: 10px;
+    width: 100%;
+  }
+  .caja_aux_responsive{
+    display: flex;
+    width: 73%;
+  }
+  /*portafolio*/
+  .contenedor_fichas_portafolio{
+    display: flex;
+    padding: 2%;
+  }
+  .ficha_pequeña{
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    height: fit-content;
+    padding-right: 2%;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .ficha_grande{
+    width: 60%;
+    display: flex;
+    align-items: flex-end;
+    height: fit-content;
+    padding-right: 2%;
+    flex-direction: column;
+  }
+  .ficha_pequeña img{
+    border-radius: 10px;
+    width: 100%;
+  }
+  .ficha_grande img{
+    border-radius: 10px;
+    width: 100%;
+  }
+  .descripcion_img{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-bottom: rgb(84, 84, 84) 1px solid;
+    color: rgb(84, 84, 84);
+  }
+  .descripcion_img2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-bottom: rgb(84, 84, 84) 1px solid;
+    color: rgb(84, 84, 84);
+  }
+  .prafolio_overflow{
+    overflow: auto;
+  }
+ /*desplegar portafolio*/
+ .cajita_proyecto1{
+  cursor: pointer;
+}
+ .checker_proyecto1{
+  display: none;
+  transition: all .3s;
+}
+.checker_proyecto1:checked + .proyecto1{
+  width: 73%;
+  visibility:visible;
+  opacity:1;
+}
+.checker_proyecto1:checked + .proyecto2{
+  width: 73%;
+  visibility:visible;
+  opacity:1;
+}
+.proyecto1{
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  left:10; /*editar*/
+  width: 73%;
+  visibility:hidden;
+  opacity:0;
+  transition: all .3s;
+  overflow: auto;
+  top: 0%;
+}
+.proyecto2{
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  right: 0; /*editar*/
+  width: 73%;
+  visibility:hidden;
+  opacity:0;
+  transition: all .3s;
+  overflow: auto;
+  top: 0%;
+}
+.caja_general_proyecto{
+  padding: 2%;
+  padding-top: 7%;
+  padding-left: 0%;
+}
+.caja_general_proyecto2{
+  padding: 2%;
+  padding-top: 7%;
+  padding-right: 4%;
+}
+.imagen_proyecto img{
+  width: 100%;
+  border-radius: 10px;
+  height: 500px;
+}
+.imagen_dentro{
+  width: 100%;
+}
+.imagen_proyecto{
+  width: 100%;
+}
+.subtitulos_proyecto{
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: lighter;
+  border-bottom: black 1px solid;
+}
+.detalles_proyecto{
+  display: flex;
+  padding-top: 2%;
+
+}
+.descripcion_proyecto{
+  width: 30%;
+}
+.parrafo_proyecto{
+  width: 40%;
+}
+.rol_proyecto{
+  width: 15%;
+}
+.año_proyecto{
+  width: 15%;
+}
+.parrafo_proyecto p{
+  margin-top: 0%;
+}
+.content {
+  animation: 15s ease forwards;
+}
+
+  
+
+  /*CELULAR*/
+  @media screen and (max-width: 600px){
+    body,html{
+      overflow: auto;
+    }
+    .opcion_menu{
+        border-bottom: none;
+        padding-bottom: 0%;
+        writing-mode:vertical-lr;
+        width: fit-content;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        transform: rotate(180deg);
+    }
+    .background_menu{
+        height: 100%;
+        font-size: 20px;
+        
+    }
+    
+    .caja_aux_responsive{
+      flex-direction: column;
+      width: 78%;
+    }
+    .titulo_seccion{
+      width: 15%;
+      font-size: 20px;
+      align-items: center;
+      justify-content: flex-end;
+      writing-mode:vertical-lr;
+      transform: rotate(180deg);
+      padding-top: 10%;
+    }
+    .subtitulo_seccion{
+      width: 7%;
+      font-size: 16px;
+      writing-mode:vertical-lr;
+      transform: rotate(180deg);
+      padding-bottom: 1%;
+      padding-right: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .roles{
+      flex-direction: column;
+      padding-left: 10%;
+      padding-bottom: 10%;
+    }
+    .titulo_perfil{
+      padding: 5%;
+      padding-top: 30%;
+      letter-spacing: 2px;
+    }
+    .contenedor_info {
+      width: 100%;
+    }
+    .contenedor_habilidades {
+      width: 80%;
+      border-radius: 0px 30px 30px 0px;
+      padding: 0% 5% 20% 0%;
+    }
+    .descripcion {
+      padding: 10%;
+    }
+    .letra_White {
+      padding-top: 10%;
+      padding-left: 10%;
+      padding-bottom: 5%;
+    }
+    .caja_contenido_shalk {
+      height: 100%;
+    }
+    .nombre_shalk{
+      height: 95vh;
+      margin-bottom: 0%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .checker_perfil:checked + .experiencia{
+      width: 100%;
+      visibility:visible;
+      opacity:1;
+      height: 100%;
+      
+    }
+    .palabra_perfil{
+      padding-bottom: 4%;
+    }
+    .experiencia{
+      position: absolute;
+      background-color: white;
+      height: auto;
+      left: 0%;
+      width: 100%;
+      height: 0%;
+      visibility:hidden;
+      opacity:0;
+      transition: all .3s;
+      overflow: auto;
+    }
+    .caja_experiencia{
+      padding-top: 50%;
+    }
+    .caja_negra_experiencia{
+      width: 100%;
+    }
+    .caja_vacia{
+      display: none;
+    }
+    .caja_laboral{
+      width: 100%;
+    }
+    .caja_laboral2{
+      width: 100%;
+    }
+    .titulo_experiencia{
+      padding: 0%;
+    }
+    .caja_2_derecha{
+      display: none;
+    }
+    .caja_experiencia_info {
+      width: 100%;
+    }
+    .objetivos_insights{
+      display: none;
+    }
+    .caja_experiencia_3{
+      display: none;
+    }
+    .caja_experiencia_1{
+      flex-direction: column;
+    }
+    .caja_academica{
+      width: 100%;
+    }
+    .palabra_perfil2{
+      padding-bottom: 1.5%;
+    }
+    /*PORTAFOLIO*/
+    .contenedor_fichas_portafolio{
+      flex-direction: column;
+      position: relative;
+    }
+    
+    .ficha_pequeña {
+      width: 100%;
+      padding: 10% 0;
+    }
+    .ficha_grande{
+      width: 100%;
+      padding: 10% 0;
+    }
+    .imagen_proyecto img{
+      height: 250px;
+    }
+    .checker_proyecto1:checked + .proyecto1 {
+      width: 100%;
+      z-index: 1;
+    }
+    .caja_general_proyecto {
+      padding: 0%;
+      padding-top: 7%;
+    }
+    .subtitulos_proyecto .descripcion_proyecto{
+      width: 100%;
+    }
+    .subtitulos_proyecto .año_proyecto{
+      display: none;
+    }
+    .subtitulos_proyecto .parrafo_proyecto{
+      display: none;
+    }
+    .subtitulos_proyecto .rol_proyecto{
+      display: none;
+    }
+    .detalles_proyecto{
+      flex-direction: column;
+    }
+    .descripcion_proyecto {
+      width: 100%;
+    }
+    .parrafo_proyecto {
+      width: 100%;
+      padding-top: 5%;
+    }
+    .rol_proyecto {
+      width: 100%;
+    }
+    .año_proyecto {
+      width: 100%;
+    }
+    .checker_proyecto1:checked + .proyecto2 {
+      width: 100%;
+      z-index: 1;
+    }
+    .proyecto1{
+      height: 100vh;
+    }
+    .proyecto2{
+      height: 100vh;
+    }
+    .tiempo{
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .contenedor_info_portafolio {
+      width: 100%;
+      padding-top: 15%;
+    }
+    .caja_general_proyecto {
+      padding-top: 0%;
+      padding: 0%;
+      padding-right: 4%;
+    }
+    .caja_general_proyecto2{
+      padding: 0%;
+      padding-top: 0%;
+      padding-right: 4%;
+      padding-left: 2%;
+    }
+  
+
+
+  }
+  
+  @keyframes moveUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes moveDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+ 
+  
+
+  
