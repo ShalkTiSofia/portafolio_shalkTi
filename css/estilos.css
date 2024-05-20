@@ -431,6 +431,7 @@ body, html {
 .contenedor_info{
   width: 69%;
 }
+
 .contenedor_info_portafolio{
   width: 100%;
   padding-top: 5%;
@@ -581,6 +582,23 @@ body, html {
 }
 .prafolio_overflow{
   overflow: auto;
+  overflow-x: hidden;
+}
+.titulo_portafolio{
+  border-bottom: 1px solid black;
+  margin-top: 10%;
+  padding-left: 2%;
+  letter-spacing: 2px;
+}
+.subtitulo_portafolio{
+  padding-left: 2%;
+  letter-spacing: 2px;
+}
+.sliderBottom h4{
+  font-weight: 100;
+}
+.subtitulo_portafolio h4{
+  font-weight: 100;
 }
 .parrafo_proyecto p {
   margin-top: 0%;
@@ -1041,6 +1059,23 @@ background-color: white;
     padding-top: 0%;
     padding-right: 4%;
     padding-left: 2%;
+  }
+  .titulo_portafolio{
+    margin-top: 70%;
+    padding-left: 5%;
+  }
+  .subtitulo_portafolio{
+    padding-left: 5%;
+    letter-spacing: 2px;
+  }
+  .sliderBottom h4{
+    font-size: 15px;
+  }
+  .subtitulo_portafolio h4{
+    font-weight: 100;
+  }
+  .footer_ocultar{
+    display: none;
   }
 
 
