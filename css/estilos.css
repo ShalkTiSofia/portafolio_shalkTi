@@ -231,20 +231,23 @@ body, html {
   letter-spacing: 2px;
 }
 .borde_blanco{
-  border: 1px white solid;
+  border: 1px rgb(0, 0, 0) solid;
 }
 .caja_experiencia_1{
   display: flex;
   border-bottom: black 1px solid;
+  border-top: black 1px solid;
 }
 .caja_academica_1{
   display: flex;
-  border-bottom: rgb(255, 255, 255) 1px solid;
+  border-bottom: rgb(0, 0, 0) 1px solid;
 }
 .caja_academica{
-  width: 25%;
- border-right: white solid 1px;
- border-top: white solid 1px;
+  width: 30%;
+  border-right: rgb(0, 0, 0) solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .caja_laboral{
   border-right: 1px solid black;
@@ -268,6 +271,22 @@ body, html {
 .caja_laboral h4{
   margin: 0%;
 }
+.caja_imagenes_experiencia{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px black solid;
+}
+.imagenes_experiencia{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.imagenes_experiencia img{
+  width: 80%;
+  margin: 5%;
+  border-radius: 20px;
+}
 .titulo_experiencia{
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -287,10 +306,15 @@ body, html {
   padding: 2%;
   padding-bottom: 1%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: 80px;
   justify-content: flex-end;
-  border-bottom: white solid 1px;
+  border-bottom: rgb(0, 0, 0) solid 1px;
+  width: 95%;
+}
+.titulo_experiencia_academica h4{
+  width: fit-content;
 }
 .caja_experiencia_2{
   display: flex;
@@ -303,13 +327,41 @@ body, html {
   padding-bottom: 0%;
 }
 .caja_experiencia_info_academica{
-  border-right: black 1px solid;
-  padding: 2%;
-  padding-bottom: 0%;
+  padding: 2% 2% 0% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   
+}
+.caja_experiencia_info_academica2{
+  padding: 2% 2% 0% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin-bottom: 3%;
+  
+}
+.caja_rol{
+  width: 70%;
+  margin-top: 20%
+}
+.rol{
+  padding: 10%;
+  border-bottom: white solid 1px;
+}
+.parrafo_rol{
+  padding: 10%;
+}
+.caja_especificacion_rol{
+  width:100%;
+  border-radius: 20px 0 0 20px;
 }
 .flex_experiencia{
   display: flex;
+  justify-content: space-between;
+
+  width: 95%;
 }
 .periodo{
   writing-mode: vertical-rl;
@@ -319,7 +371,6 @@ body, html {
   font-family: "Inter", sans-serif;
   letter-spacing: 2px;
   font-weight: 100;
-  margin-right: 5%;
   text-align: right;
   word-spacing: 10px;
 }
@@ -531,6 +582,14 @@ body, html {
 .prafolio_overflow{
   overflow: auto;
 }
+.parrafo_proyecto p {
+  margin-top: 0%;
+  width: 90%;
+}
+.descripcion_proyecto p {
+margin-top: 0%;
+width: 90%;
+}
 /*desplegar portafolio*/
 .cajita_proyecto1{
 cursor: pointer;
@@ -610,6 +669,14 @@ padding-top: 2%;
 }
 .descripcion_proyecto{
 width: 30%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.descripcion_proyecto a{
+text-decoration: none;
+color: black;
+font-weight:bold;
 }
 .parrafo_proyecto{
 width: 40%;
@@ -627,6 +694,45 @@ margin-top: 0%;
 animation: 15s ease forwards;
 }
 /*footer*/
+.formulario{
+position: relative;
+margin-top: 2%;
+}
+.formulario img{
+margin-left: 15%;
+}
+.cajas_formulario{
+position: absolute;
+top: 0%;
+right: 10%;
+width: 60%;
+height: 100%;
+}
+.cajas_input{
+display: flex;
+flex-direction: column;
+height: 100%;
+align-items: center;
+justify-content: center;
+}
+.cajas_input input{
+background-color: #DE2E03;
+border-radius: 20px;
+width: 100%;
+margin: 0.5%;
+padding: 1% 0% 1% 1%;
+color: #ffffff;
+border-color: #ffffff00;
+box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.37);
+
+}
+input::placeholder {
+color: rgba(255, 255, 255, 0.884);
+}
+.boton_enviar{
+width: 20%;
+}
+
 .caja_redes{
 display: flex;
 justify-content: space-around;
@@ -662,7 +768,8 @@ padding: 1%;
 height: 20px;
 width: 100%;
 display: flex;
-margin-top: 2%
+margin-top: 2%;
+margin-bottom:2%;
 }
 .black_separador{
 height: 100%;
@@ -783,6 +890,7 @@ background-color: white;
     opacity:0;
     transition: all .3s;
     overflow: auto;
+    overflow-x: hidden;
   }
   .caja_experiencia{
     padding-top: 50%;
@@ -793,11 +901,39 @@ background-color: white;
   .caja_vacia{
     display: none;
   }
-  .caja_laboral{
-    width: 100%;
+  .caja_imagenes_experiencia{
+    display: none;
   }
-  .caja_laboral2{
-    width: 100%;
+  .caja_rol{
+    display: none;
+  }
+  
+  .caja_redes {
+    flex-direction: column;
+  }
+  .redes{
+    margin: 15%;
+    margin-left: 25%;
+  }
+  .formulario img {
+    margin-left: 0%;
+    position: relative;
+    left: -40%;
+  }
+  .periodo{
+    margin-right: 3%;
+  }
+  .cajas_formulario {
+    right: -5%;
+    width: 80%;
+  }
+  .cajas_input input{
+    margin: 1.5%;
+    padding: 3% 0% 3% 3%;
+  }
+
+  .caja_laboral2, .caja_laboral {
+    width: 95.5%;
   }
   .titulo_experiencia{
     padding: 0%;
@@ -844,10 +980,10 @@ background-color: white;
     width: 100%;
     z-index: 1;
   }
-  .caja_general_proyecto {
-    padding: 0%;
-    padding-top: 7%;
-  }
+.caja_general_proyecto {
+  padding: 0%;
+  padding-top: 7%;
+}
   .subtitulos_proyecto .descripcion_proyecto{
     width: 100%;
   }
